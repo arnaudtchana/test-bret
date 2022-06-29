@@ -1,5 +1,5 @@
-apiVersion: serving.knative.dev/v1alpha1
-kind: Service
+apiVersion: tekton.dev/v1alpha1
+kind: Deployment
 metadata:
   name: bretfish
   namespace: default
