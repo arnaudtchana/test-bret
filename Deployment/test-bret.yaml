@@ -1,12 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bretfish
+  labels:
+    app: bret
+  name: bret
   namespace: default
 spec:
-  runLatest:
-    configuration:
-      revisionTemplate:
-        spec:
-          container:
-            image: __IMAGE__
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bret
+  template:
+    metadata:
+      labels:
+        app: bret
+    spec:
+      containers:
+      - image: __IMAGE__
+        imagePullPolicy: Always
+        name: bret
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources: {}
+      restartPolicy: Always
