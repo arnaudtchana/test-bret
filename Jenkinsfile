@@ -2,14 +2,21 @@ pipeline {
   agent any
   
   stages {
-    stage("build") {
-      echo "On build lapp"
+    stage('build') {
+      steps {
+        echo "On build lapp"
+      }
+      
     }
-    stage("test") {
-      echo "On teste lapp"
+    stage('test') {
+      steps {
+        echo "On teste lapp"
+      }
     }
-    stage("test") {
-      echo "On deploie lapp"
+    stage('deploy') {
+      steps {
+        echo "On deploie lapp"
+      }
     }
   }
 }
