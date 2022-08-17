@@ -19,7 +19,7 @@ pipeline {
     }
     stage('pushing to docker hub') {
       steps {
-        echo "On push sur docker hub"
+        echo "On push sur docker hub pour savoir ce qui derange"
         sh 'echo $dockerHub_PSW | docker login -u $dockerHub_USR --password-stdin'
         sh "docker push ${IMAGE_NAME}:${IMAGE_TAG}"
       }
