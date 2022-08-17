@@ -6,7 +6,7 @@ pipeline {
     DOCKER_HUB_USERNAME = "arnaudrhopen"
     APP_NAME = "bret-app-test"
     IMAGE_TAG = "${BUILD_NUMBER}"
-    IMAGE_NAME = "${DOCKER_HUB_USERNAME}" + "/" + "${$APP_NAME}"
+    IMAGE_NAME = "${DOCKER_HUB_USERNAME}" + "/" + "${APP_NAME}"
   }
   
   stages {
