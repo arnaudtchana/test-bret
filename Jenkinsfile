@@ -26,7 +26,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        echo "On deploie lapp en production avec le webhooks sur github et on teste a nouveau"
+        echo "On deploie lapp en production avec le webhooks sur github et on teste directement"
       }
     }
   }
