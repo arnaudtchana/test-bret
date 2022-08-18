@@ -18,7 +18,7 @@ pipeline {
       
     }
     stage('pushing to docker hub') {
-      steps {
+      steps { 
         echo "On push sur docker hub pour savoir ce qui derange"
         sh 'echo $dockerHub_PSW | docker login -u $dockerHub_USR --password-stdin'
         sh "docker push ${IMAGE_NAME}:${IMAGE_TAG}"
@@ -26,7 +26,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        echo "On deploie lapp en production avec le webhooks sur le projet directement ici"
+        echo "On deploie lapp en production avec le webhooks sur le projet directement pour voir si le multi branch passe"
       }
     }
   }
