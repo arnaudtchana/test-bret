@@ -26,7 +26,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        echo "On deploie lapp en production avec le webhooks sur le projet freestyle"
+        echo "On deploie lapp en production avec le webhooks sur le projet freestyle on teste à nouveau le webhook"
       }
     }
   }
