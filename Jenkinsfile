@@ -19,7 +19,7 @@ pipeline {
     }
     stage('pushing to docker hub') {
       steps { 
-        echo "On push sur docker hub pour savoir ce qui derange"
+        echo "On push sur docker hub pour savoir ce qui"
         //sh 'echo $dockerHub_PSW | docker login -u $dockerHub_USR --password-stdin'
         sh 'aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 206958214313.dkr.ecr.eu-west-2.amazonaws.com'
         sh "docker push ${IMAGE_NAME.toLowerCase()}:${IMAGE_TAG}"
