@@ -3,8 +3,8 @@ pipeline {
   
   environment {
     dockerHub = credentials('dockerHub')
-    DOCKER_HUB_USERNAME = "arnaudrhopen"
-    APP_NAME = "BRET-app-test"
+    DOCKER_HUB_USERNAME = "206958214313.dkr.ecr.eu-west-2.amazonaws.com"
+    APP_NAME = "tello"
     IMAGE_TAG = "${BUILD_NUMBER}"
     IMAGE_NAME = "${DOCKER_HUB_USERNAME}" + "/" + "${APP_NAME}"
   }
